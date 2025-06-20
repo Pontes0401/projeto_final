@@ -2,7 +2,7 @@ const CACHE_NAME = "v1";
 const OFFLINE_URL = "/offline.html";
 const ASSETS = [
   "/index.html",
-  "/login.js",
+  "login.js",
   "/login.css",
   "/offline.html",
   "/icons/icon-192x192.png",
