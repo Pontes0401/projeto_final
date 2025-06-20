@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crianças</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/pagina_crianca.css?v=1.0.5">
+</head>
+<body>
+  <div class="header d-flex align-items-center justify-content-between px-4 py-3">
+    <div>
+      <p class="mb-0">Olá</p>
+      <h5 class="mb-0 text-white fw-bold" id="user-name"></h5>
+    </div>
+    <div class="d-flex gap-3">
+      <a href="logout.js"><i class="bi bi-box-arrow-left text-white fs-4"></i></a>
+    </div>
+  </div>
+
+  <div class="conteudo-principal">
+    <form id="registo-dia">
+      <h6 class="fw-bold">Como te sentes hoje?</h6>
+      <div class="d-flex justify-content-between mb-4" id="emoji-selector">
+        <span class="emoji" data-estado="contente">😀</span>
+        <span class="emoji" data-estado="excelente">😁</span>
+        <span class="emoji" data-estado="triste">😔</span>
+        <span class="emoji" data-estado="perfeito">🥳</span>
+        <span class="emoji" data-estado="muito mau">😡</span>
+      </div>
+
+      <h6 class="fw-bold">Como foi o teu dia?</h6>
+      <div class="form-box mb-4">
+        <label class="form-label fw-semibold">O que eu fiz certo?</label>
+        <textarea class="form-control" id="positivo" placeholder="Escreve aqui"></textarea>
+      </div>
+
+      <div class="form-box mb-4">
+        <label class="form-label fw-semibold">O que poderia ter feito melhor?</label>
+        <textarea class="form-control" id="negativo" placeholder="Escreve aqui"></textarea>
+      </div>
+
+      <div class="form-box mb-4">
+        <label class="form-label fw-semibold">O que posso melhorar para amanhã?</label>
+        <textarea class="form-control" id="melhorar" placeholder="Escreve aqui"></textarea>
+      </div>
+
+      <div class="botao-guardar-container">
+        <button type="submit" class="btn btn-danger w-100">Guardar</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer-nav fixed-bottom bg-danger">
+    <div class="d-flex justify-content-around align-items-center w-100 py-2">
+      <a href="perfil_crianca.html" class="footer-icon">
+        <i class="bi bi-person-fill"></i>
+      </a>
+      <a href="home.html" class="footer-icon">
+        <i class="bi bi-house-fill"></i>
+      </a>
+      <a href="videos.html" class="footer-icon">
+        <i class="bi bi-collection-play-fill"></i>
+      </a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script type="module" src="js/pagina_crianca.js"></script>
+</body>
+</html>

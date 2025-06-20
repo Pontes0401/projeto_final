@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/register.css?v=1.0.4" />
+  <link rel="icon" href="images/favicon.ico" type="images/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="register-wrapper">
+    <div class="overlay d-flex justify-content-center align-items-center">
+      <div class="register-box text-center" style="border-radius: 30px 30px 30px 30px;">
+        <img src="images/icon azul.png" alt="Logo DesenvolveMente" class="logo-img mb-4" style="max-width: 40px;">
+        <form id="form-step-1" onsubmit="event.preventDefault()">
+          <input type="text" id="nome" class="form-control input-custom" placeholder="nome completo *" />
+          <input type="email" id="email" class="form-control input-custom" placeholder="email *" />
+          <input type="text" id="telemovel" class="form-control input-custom" placeholder="nº telemovel *" />
+          <input type="date" id="dataNascimento" class="form-control input-custom" placeholder="data de nascimento *" />
+          <input type="password" id="password" class="form-control input-custom" placeholder="password *" />
+
+          <div class="custom-checkbox">
+            <input type="checkbox" id="health-professional" onchange="toggleHealthMode()" />
+            <label for="health-professional">profissional da saúde?</label>
+          </div>
+
+          <div class="mb-3 d-none" id="cedula-field">
+            <input type="text" id="numeroCedula" class="form-control input-custom" placeholder="nº cédula" />
+          </div>
+
+          <div class="d-flex justify-content-between mt-4" id="btn-group-1">
+            <button type="button" class="btn btn-login" onclick="window.location.href='login.html'">Voltar</button>
+            <button type="button" class="btn btn-login" id="btn-dynamic" onclick="handleAction()">Seguinte</button>
+          </div>
+        </form>
+
+        <form id="form-step-2" class="d-none" onsubmit="event.preventDefault()">
+          <input type="number" id="numeroFilhos" class="form-control input-custom" placeholder="nº filhos" />
+          <input type="text" id="nomeCrianca" class="form-control input-custom" placeholder="nome da criança" />
+          <input type="date" id="dataNascimentoCrianca" class="form-control input-custom" placeholder="data de nascimento criança" />
+
+          <div class="d-flex justify-content-between mt-4">
+            <button type="button" class="btn btn-login" onclick="goToStep1()">Voltar</button>
+            <button type="button" class="btn btn-login" onclick="validarStep2()">Concluído</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.42.3/dist/umd/supabase.min.js"></script>
+  <script type="module" src="js/register.js"></script>
+</body>
+</html>
